@@ -6,7 +6,6 @@ const cookieParser = require("cookie-parser");
 connecttodb();
 app.use(express.json());
 app.use(cors({ origin: "https://brain-assignment.vercel.app/" }));
-app.options("*", cors());
 app.use(cookieParser());
 
 app.use("/auth", require("./routes/auth"));
