@@ -71,7 +71,7 @@ router.post(
       const verificationToken = jwt.sign({ email }, process.env.ENC_KEY, {
         expiresIn: "1d",
       });
-      const verificationLink = `https://brain-assignment-back.onrender.com/verify?token=${verificationToken}`;
+      const verificationLink = `https://brain-assignment-back.onrender.com/auth/verify?token=${verificationToken}`;
 
       // Create a nodemailer transporter
       const transporter = nodemailer.createTransport({
